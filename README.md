@@ -68,14 +68,17 @@ print(df_payments)
 ```
 **DataFrame Creation**: This section creates a pandas DataFrame (`df_payments`) from the `payments` dictionary for easy viewing and analysis. It prints the DataFrame to the console.
 ```py
-plt.plot(df_payments["Period"],df_payments["Interest Paid"],color="red", 
-         label="Interest Paid" )
-plt.plot(df_payments["Period"],df_payments["Principal Paid"],color="blue", 
-         label="Principal Paid")
+plt.figure(figsize=(10, 6))
+
+plt.plot(df_payments["Period"], df_payments["Interest Paid"], label="Interest Paid")
+plt.plot(df_payments["Period"], df_payments["Principal Paid"], label="Principal Paid")
+
 plt.title("Interest and Principal Payments Over Time")
 plt.xlabel("Periods")
 plt.ylabel("Amount ($)")
 plt.legend()
+plt.grid(True)
+
 plt.show()
 ```
 **Plotting**: Finally, this section plots the interest and principal payments over time using `matplotlib.pyplot`. It sets the title, labels, and legend for the plot before displaying it.
@@ -105,7 +108,7 @@ The output dictionary contains the following key-value pairs:
 - Remaining Balance: An array representing the remaining principal balance after each period's payment.
 
 # Plot
-![image](https://github.com/iftekhar-kabir/Mortgage-Payment-Schedule-with-Python/assets/163831745/f4aeaed5-ed0a-4a07-83fa-a576b93b295d)
+![image](https://github.com/iftekhar-kabir/Mortgage-Payment-Schedule-with-Python/assets/163831745/e30d896d-514e-437c-9736-518190c3f93c)
 
 The plot visualizes the interest and principal payments over time during the mortgage loan period. It consists of two lines:
 
